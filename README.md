@@ -41,7 +41,7 @@ MetaMask just hung at `Connecting to Unknown Private Network` screen. `getListen
 
 ---
 
-### Scenario 3 - Main Network Before Dead Node
+#### Scenario 3 - Main Network Before Dead Node
 
 ##### Steps to reproduce
 
