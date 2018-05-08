@@ -1,5 +1,9 @@
 This repo is created to assist MetaMask team to understand the context of reported [issue](https://github.com/MetaMask/metamask-extension/issues/4181) by me easier and clearer.
 
+Note:
+
+I'm using web3 0.20.6 for this simulation.
+
 ---
 
 ### Results
