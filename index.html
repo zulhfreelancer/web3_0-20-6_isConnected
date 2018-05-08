@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Web3</title>
+    <script type="text/javascript" src="web3.min.js"></script>
+  </head>
+  <body>
+    <center>Hello!</center>
+
+    <script type="text/javascript">
+      window.addEventListener("load", function() {
+        if (typeof web3 !== "undefined") {
+          console.log("Mist/MetaMask found, awesome!");
+          window.web3 = new Web3(web3.currentProvider); // Mist or MetaMask
+          monitorNetwork();
+        } else {
+          console.log("No web3? You should consider trying MetaMask!");
+          window.web3 = new Web3(new Web3.providers.HttpProvider("https://localhost:8545"));
+        }
+
+        console.log("Using web3", web3.version.api);
+      });
+
+      function monitorNetwork() {
+        console.log('Monitoring network...');
+        setInterval(function(){
+          web3.net.getListening(function(e, d) {
+            if (e) {
+              return console.log('getListening error', e);
+            }
+
+            console.log('getListening data', d, 'isConnected?', web3.isConnected());
+          });
+        }, 5000);
+      }
+    </script>
+  </body>
+</html>
