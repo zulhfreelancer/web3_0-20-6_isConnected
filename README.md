@@ -2,7 +2,7 @@ This repo is created to assist MetaMask team to understand the context of report
 
 Note:
 
-I'm using web3 0.20.6 for this simulation.
+I'm using web3 0.20.3 for this simulation.
 
 ---
 
